@@ -1,6 +1,7 @@
 <?php
 //session_start();
 //session_destroy(); // Эта строка уничтожит текущую сессию
+ini_set('session.save_path', '/tmp');
 session_start();
 error_log("DEBUG: Current session.save_path: " . session_save_path());
 
