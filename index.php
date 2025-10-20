@@ -2,6 +2,11 @@
 //session_start();
 //session_destroy(); // Эта строка уничтожит текущую сессию
 ini_set('session.save_path', '/tmp');
+ini_set('session.cookie_secure', 1);
+session_set_cookie_params([
+    'samesite' => 'None',
+    'secure' => true
+]);
 session_start();
 error_log("DEBUG: Current session.save_path: " . session_save_path());
 

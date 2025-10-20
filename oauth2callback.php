@@ -1,5 +1,10 @@
 <?php
 ini_set('session.save_path', '/tmp');
+ini_set('session.cookie_secure', 1);
+session_set_cookie_params([
+    'samesite' => 'None',
+    'secure' => true
+]);
 session_start(); // 1. Запуск сессии - всегда в начале!
 // 2. Настройки отображения ошибок (ОБЯЗАТЕЛЬНО УДАЛИТЬ В ПРОДАКШЕНЕ!)
 ini_set('display_errors', 1);
