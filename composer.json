@@ -1,0 +1,13 @@
+{
+    "name": "zasolyvsolo/youtube-helper-backend",
+    "description": "BSHa",
+    "authors": [
+        {
+            "name": "Zasolyvsolo"
+        }
+    ],
+    "require": {
+        "google/apiclient": "^2.18",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
