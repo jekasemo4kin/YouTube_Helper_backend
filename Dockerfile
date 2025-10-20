@@ -21,6 +21,4 @@ COPY . /var/www/html/
 # Установка зависимостей Composer
 # Render выполнит эту команду
 RUN composer install --no-dev
-RUN mkdir -p /var/lib/php/sessions && chmod -R 777 /var/lib/php/sessions
-# Команда запуска (по умолчанию для образа php-apache). Render сам запустит Apache.
 CMD ["apache2-foreground"]
