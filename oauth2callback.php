@@ -9,15 +9,11 @@ error_reporting(E_ALL);
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Dotenv\Dotenv;
 use Google\Client;
 use Google\Service\Oauth2;
 use Google\Service\YouTube;
 use GuzzleHttp\Client as GuzzleClient;
 
-
-$dotenv = Dotenv::createImmutable(__DIR__);
-$dotenv->load();
 
 $client = new Client();
 $client->setClientId($_ENV['GOOGLE_CLIENT_ID']);

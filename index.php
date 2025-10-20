@@ -7,14 +7,10 @@ error_log("DEBUG: Current session.save_path: " . session_save_path());
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Dotenv\Dotenv;
 use Google\Client; 
 use Google\Service\Gmail; 
 use GuzzleHttp\Client as GuzzleClient; 
 
-
-$dotenv = Dotenv::createImmutable(__DIR__);
-$dotenv->load();
 
 $client = new Google_Client();
 $client->setClientId($_ENV['GOOGLE_CLIENT_ID']);

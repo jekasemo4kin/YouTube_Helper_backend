@@ -5,8 +5,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 require_once __DIR__ . '/vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+
 header('Content-Type: application/json'); 
 header("Access-Control-Allow-Origin: " . $_ENV['FRONTEND_REDIRECT_URL_BASE']); // Разрешаем CORS для вашего фронтенда. Разные порты - это разные источники. Без этого заголовка брауз блокировал бы все AJAX запросы от фронта к бэку 
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS"); // Разрешаем методы, которые будет использовать фронтенд
